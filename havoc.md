@@ -13,6 +13,7 @@
 - [Configuring a Listener](#configuring-a-listener)
 - [Generating and Deploying Payloads](#generating-and-deploying-payloads)
 - [Managing Sessions](#managing-sessions)
+- [Quick Havoc Installation via APT](#quick-havoc-installation-via-apt)
 - [Conclusion](#conclusion)
 
 ## Introduction
@@ -186,19 +187,6 @@ For persistent Havoc installation:
 rm /home/$(whoami)/.havoc/data/teamserver.db && rm -rf /home/$(whoami)/.havoc/data/loot/*
 ```
 
-## Conclusion
-
-By following this guide, you have successfully:
-
-- Installed and configured the Havoc C2 server
-- Built and launched the team server and client
-- Configured listeners for payload communication
-- Generated, deployed, and executed payloads on a target system
-
-For further information and advanced configurations, refer to the official [Havoc Framework Documentation](https://havocframework.com/docs/installation).
-
----
-
 ## Quick Havoc Installation via APT
 
 If you prefer an easier installation, use APT:
@@ -239,5 +227,18 @@ rm /home/$(whoami)/.havoc/data/teamserver.db && rm -rf /home/$(whoami)/.havoc/da
 ```
 
 This guide ensures a seamless setup of the Havoc C2 framework for effective red teaming and penetration testing operations.
+
+---
+
+## Conclusion
+
+By following this guide, you have successfully:
+
+- Installed and configured the Havoc C2 server
+- Built and launched the team server and client
+- Configured listeners for payload communication
+- Generated, deployed, and executed payloads on a target system
+
+For further information and advanced configurations, refer to the official [Havoc Framework Documentation](https://havocframework.com/docs/installation).
 
 ---
