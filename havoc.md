@@ -145,8 +145,56 @@ Launch the client:
 1. Navigate to `View` > `Listeners`
 2. Click `Add`
 3. Configure the following settings:
-
-    Name: <title>
-    Host: <192.168.x.x>
+       Name: `<title>`
+       Host: `<192.168.x.x>`
    
 4. Save the listener configuration.
+
+## Generating and Deploying Payloads
+
+### Generate Payload
+
+1. In the Havoc client, go to `Attack > Payload > Generate`
+2. Save the generated payload.
+
+## Deploy and Execute Payload on Target Machine
+
+Transfer the payload to the target machine and execute it:
+
+```bash
+scp payload.exe user@target:/path/to/destination
+```
+
+Execute the payload on the target system. Once the payload is executed, it will establish a connection back to the Havoc C2 server.
+
+## Managing Sessions
+
+### Check for Active Sessions
+
+Once the payload is executed, check for active shells in the Havoc client.
+
+### Removing Old Sessions
+
+To clear previous session data:
+
+```bash
+rm -rf data/loot/* && rm -f data/teamserver.db
+```
+
+For persistent Havoc installation:
+```bash
+rm /home/$(whoami)/.havoc/data/teamserver.db && rm -rf /home/$(whoami)/.havoc/data/loot/*
+```
+
+## Conclusion
+
+By following this guide, you have successfully:
+
+- Installed and configured the Havoc C2 server
+- Built and launched the team server and client
+- Configured listeners for payload communication
+- Generated, deployed, and executed payloads on a target system
+
+For further information and advanced configurations, refer to the official Havoc documentation: [Havoc Framework Documentation](#https://havocframework.com/docs/installation).
+
+---
