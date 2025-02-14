@@ -198,3 +198,46 @@ By following this guide, you have successfully:
 For further information and advanced configurations, refer to the official [Havoc Framework Documentation](https://havocframework.com/docs/installation).
 
 ---
+
+## Quick Havoc Installation via APT
+
+If you prefer an easier installation, use APT:
+
+```bash
+sudo apt install havoc
+```
+
+Modify the default profile settings:
+
+```bash
+vim /usr/share/havoc/profiles/havoc.yaotl
+```
+
+Set the administrator credentials: `admin:admin` .
+
+Start the server and client:
+
+```bash
+havoc server --profile ./profiles/havoc.yaotl -v --debug
+havoc client
+```
+
+Configure a listener and deploy the payload:
+
+1. `View > Listeners > Add`
+2. Name: `admin-payload`
+3. Host: `192.168.x.x`
+4. Save the listener
+5. `Attack > Payload > Generate`
+6. Deploy and execute the agent on a Windows machine
+7. Once executed, access the remote shell from the Havoc client
+
+To remove previous sessions:
+
+```bash
+rm /home/$(whoami)/.havoc/data/teamserver.db && rm -rf /home/$(whoami)/.havoc/data/loot/*
+```
+
+This guide ensures a seamless setup of the Havoc C2 framework for effective red teaming and penetration testing operations.
+
+---
