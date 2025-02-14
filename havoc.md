@@ -195,7 +195,6 @@ By following this guide, you have successfully:
 - Configured listeners for payload communication
 - Generated, deployed, and executed payloads on a target system
 
-For further information and advanced configurations, refer to the official 
-<a href="https://havocframework.com/docs/installation" target="_blank" rel="noopener noreferrer">Havoc Framework Documentation</a>.
+For further information and advanced configurations, refer to the official [Havoc Framework Documentation](https://havocframework.com/docs/installation).
 
 ---
